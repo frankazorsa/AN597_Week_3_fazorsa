@@ -2,7 +2,7 @@
 title: "Original Homework code"
 author: "Frank Azorsa"
 date: "9/16/2019"
-output: 
+output:
   html_document:
     toc: true
     toc_float: true
@@ -32,7 +32,7 @@ ppois (8, lambda = 15, lower.tail = FALSE)
 + Answer:
 
 ***
-###Question 2: 
+###Question 2:
 #####What is the probability that she will hear no calls in a session?
 ***
 ```{r}
@@ -40,7 +40,7 @@ dpois(x=0, lambda = 15)
 ```
 
 ***
-###Question 3: 
+###Question 3:
 #####What is the probability that she will hear exactly 3 calls in a session?
 ***
 ```{r}
@@ -48,7 +48,7 @@ dpois(x=3, lambda =15)
 ```
 
 ***
-###Question 4: 
+###Question 4:
 #####Plot the relevant Poisson mass function over the values in range 0 ≤ x ≤ 30.
 ***
 ```{r}
@@ -69,7 +69,7 @@ barplot(probset,names.arg=x,space = 0,xlab = "x", ylab="Pr(X-x)", main="Probabil
 ```
 
 ***
-###Question 5: 
+###Question 5:
 #####Simulate 104 results from this distribution (i.e., 2 years of Saturday monitoring sessions).
 ***
 ```{r}
@@ -79,7 +79,7 @@ summary(sim)
 ```
 
 ***
-###Question 6: 
+###Question 6:
 #####Plot the simulated results using hist() and use xlim() to set the horizontal limits to be from 0 to 30. How does your histogram compare to the shape of the probability mass function you plotted above?
 ***
 ```{r}
