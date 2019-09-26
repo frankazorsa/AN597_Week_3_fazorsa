@@ -26,6 +26,7 @@ This is the code for [Homework 02](https://fuzzyatelin.github.io/bioanth-stats/h
 ###Question 1:
 #####What is the probability that she will hear more than 8 calls during any given session?
 ***
+
 ```{r}
 ppois (8, lambda = 15, lower.tail = FALSE)
 ```
@@ -35,6 +36,7 @@ ppois (8, lambda = 15, lower.tail = FALSE)
 ###Question 2:
 #####What is the probability that she will hear no calls in a session?
 ***
+
 ```{r}
 dpois(x=0, lambda = 15)
 ```
@@ -43,6 +45,7 @@ dpois(x=0, lambda = 15)
 ###Question 3:
 #####What is the probability that she will hear exactly 3 calls in a session?
 ***
+
 ```{r}
 dpois(x=3, lambda =15)
 ```
@@ -51,6 +54,7 @@ dpois(x=3, lambda =15)
 ###Question 4:
 #####Plot the relevant Poisson mass function over the values in range 0 ≤ x ≤ 30.
 ***
+
 ```{r}
 rv <- 0:30
 fs <- ppois (rv, lambda =15)
@@ -71,6 +75,7 @@ barplot(probset,names.arg=x,space = 0,xlab = "x", ylab="Pr(X-x)", main="Probabil
 ***
 ###Question 5:
 #####Simulate 104 results from this distribution (i.e., 2 years of Saturday monitoring sessions).
+
 ***
 ```{r}
 sim <-rpois(104, lambda = 15)
@@ -82,6 +87,7 @@ summary(sim)
 ###Question 6:
 #####Plot the simulated results using hist() and use xlim() to set the horizontal limits to be from 0 to 30. How does your histogram compare to the shape of the probability mass function you plotted above?
 ***
+
 ```{r}
 hist(sim, xlim = c(0,30), main = "Histogram of the simulation", col = "white", xlab = "number of calls")
 ```
